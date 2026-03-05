@@ -18,6 +18,11 @@ public class UserController {
     @Autowired
     private UserRepository userRepo;
 
+    @GetMapping("/")
+    public String home() {
+        return "Backend is running. Endpoints: /demo, /users, /register";
+    }
+
     @GetMapping("/demo")
     public String demo() {
         return "I am good, how are you....";
